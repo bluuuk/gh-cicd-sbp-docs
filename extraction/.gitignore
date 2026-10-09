@@ -1,0 +1,8 @@
+.venv
+gh-docs*
+gh-docs
+!gh-docs-2026-02-19.zip
+__pycache__
+.secrets
+gh-docs-no-org-*.json
+gh-docs-no-org-b4eb58097cc0.json

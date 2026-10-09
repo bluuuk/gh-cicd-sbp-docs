@@ -1,0 +1,26 @@
+"code-security/responsible-use/responsible-ai-regex-generator.md":
+  extractions:
+    - extraction_class: "security_advice"
+      extraction_text: |
+        ### Use Copilot secret scanning's regular expression generator as a tool, not a replacement
+
+        While the regular expression generator is a powerful tool to create custom patterns without you having to write regular expressions yourself, it is important to use it as a tool rather than a replacement for manual input. You should carefully validate the performance of the results by performing a dry run across your organization or repository. It's a good idea to run the pattern on a repository (or repositories) that are representative of the repositories in your organization. In some cases, it may be beneficial to modify a generated regular expression to more fully meet your needs. You remain ultimately responsible for any custom patterns you decide to use.
+      attributes:
+        type: "textual"
+"code-security/concepts/supply-chain-security/about-dependency-review.md":
+  extractions:
+    - extraction_class: "security_advice"
+      extraction_text: |
+        By checking the dependency reviews in a pull request, and changing any dependencies that are flagged as vulnerable, you can avoid vulnerabilities being added to your project. For more information about how dependency review works, see [Reviewing dependency changes in a pull request](/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/reviewing-dependency-changes-in-a-pull-request).
+      attributes:
+        type: "textual"
+    - extraction_class: "security_advice"
+      extraction_text: |
+        Dependabot alerts will find vulnerabilities that are already in your dependencies, but it's much better to avoid introducing potential problems than to fix problems at a later date. For more information about Dependabot alerts, see [About Dependabot alerts](/en/code-security/dependabot/dependabot-alerts/about-dependabot-alerts#dependabot-alerts-for-vulnerable-dependencies).
+      attributes:
+        type: "textual"
+    - extraction_class: "security_advice"
+      extraction_text: |
+        The "dependency review action" refers to the specific action that can report on differences in a pull request within the GitHub Actions context. See [`dependency-review-action`](https://github.com/actions/dependency-review-action). You can use the dependency review action in your repository to enforce dependency reviews on your pull requests. The action scans for vulnerable versions of dependencies introduced by package version changes in pull requests, and warns you about the associated security vulnerabilities. This gives you better visibility of what's changing in a pull request, and helps prevent vulnerabilities being added to your repository.
+      attributes:
+        type: "textual"

@@ -1,0 +1,39 @@
+# --- Secrets / credentials (never commit) ---
+.secrets
+.secret
+.env
+.env.*
+!.env.example
+# GCP service-account keys
+gh-docs-no-org-*.json
+*-service-account*.json
+
+# --- Python ---
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.ipynb_checkpoints/
+.ruff_cache/
+.pytest_cache/
+.mypy_cache/
+
+# --- Node / Bun ---
+node_modules/
+dist/
+out/
+*.tgz
+
+# --- Docs snapshot (unzipped from resources/gh-docs-*.zip; keep the zip) ---
+gh-docs*
+!gh-docs-*.zip
+!gh-docs/
+
+# --- Profiling / scratch artifacts ---
+*.speedscope
+
+# --- Editor / OS cruft ---
+.idea/
+.DS_Store
+*~

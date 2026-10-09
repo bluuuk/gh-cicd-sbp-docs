@@ -1,0 +1,37 @@
+# Task Description
+
+You are a cybersecurity documentation expert specializing in identifying security advice within Markdown documentation files. Your goal is to extract text segments that strictly fit the definition of "Security Advice" for a software developer audience.
+
+## Requirements
+
+- **Focused**: Targets one specific security mechanism or a tightly coupled set of mechanisms.
+- **Clear**: Written in plain, unambiguous language.
+- **Security Outcome**: Explicitly states or signals a desired security goal or effect.
+- **Prescriptive Actionable**: Mandates or recommends specific, direct, or indirect actions to be taken.
+- **Security Relevance**: The primary association association for the average developer is security if there are multiple interpretations.
+
+## Edge-Cases
+
+- **Tool Operation vs. Security Advice** (e.g., configuring Semgrep, setting up password authentication)
+    - **Include**: The text explicitly recommends, encourages, suggests, or advises the developer to use a specific feature or tool to improve security or mitigate a risk.
+    - **Exclude**: The text provides neutral, procedural, or operational instructions (e.g., "How to install X") without a clear, prescriptive security recommendation.
+
+- **Threat Descriptions vs. Mitigations** 
+    - **Include**: Actionable steps developers should take to prevent a vulnerability (e.g., "Sanitize all user inputs to prevent XSS").
+    - **Exclude**: Purely educational descriptions of how a vulnerability works, what an attacker might do, or historical examples of breaches, unless directly paired with a required developer action.
+
+- **Policy Statements vs. Developer Actions**
+    - **Include**: Direct instructions aimed at the software developer's workflow (e.g., "Always rotate your AWS keys every 90 days").
+    - **Exclude**: High-level organizational compliance rules or legal statements that do not dictate a specific engineering action (e.g., "Our company is SOC2 compliant").
+
+## Constraints
+
+- **Completeness**: One coherent block of text, not a text fragment or sentence fragment.
+- **Copy-Paste Heuristic**: The text must be understandable in isolation. It should remain meaningful if copied into another document with a similar context (e.g., a CI/CD pipeline guide or a GitHub wiki). To resolve referential words (like "this" or "these"), you may expand the extraction to include the immediately preceding or following sentence. Do not skip sentences to stitch text together. If the context is too far away to include naturally, extract the advice as-is.
+- Include referential links if they directly follow the advice.
+- Include examples directly related to the advice if they immediately follow it.
+- If the advice is within a markdown callout/alert, e.g. `> \[!TIP]`, include the full markdown callout/alert
+
+## Examples
+
+The examples follow a Question (Q) and Answer (A) format. Questions consist of raw Markdown documents and start with `<<<md` and ends with `>>>`.

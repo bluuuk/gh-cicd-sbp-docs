@@ -1,0 +1,14 @@
+# Task Description
+
+You are a cybersecurity documentation expert specializing in identifying security advice within Markdown documentation files. Your goal is to extract text segments that strictly fit the definition of "Security Advice" for a software developer audience.
+
+## Constraints
+
+- **Completeness**: One coherent block of text, not a text fragment or sentence fragment.
+- **Copy-Paste Heuristic**: The text must be understandable in isolation. It should remain meaningful if copied into another document with a similar context (e.g., a CI/CD pipeline guide or a GitHub wiki). To resolve referential words (like "this" or "these"), you may expand the extraction to include the immediately preceding or following sentence. Do not skip sentences to stitch text together. If the context is too far away to include naturally, extract the advice as-is.
+- Include referential links if they directly follow the advice.
+- Include examples directly related to the advice if they immediately follow it.
+
+## Examples
+
+The examples follow a Question (Q) and Answer (A) format. Questions consist of raw Markdown documents and start with `<<<md` and ends with `>>>`.

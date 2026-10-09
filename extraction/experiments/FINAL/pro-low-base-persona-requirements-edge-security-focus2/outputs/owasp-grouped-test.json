@@ -1,0 +1,198 @@
+{
+  "OWASP/1.1.1": [
+    {
+      "document_id": "code-security/how-tos/secure-your-supply-chain/manage-your-dependency-security/configuring-the-dependency-review-action.md",
+      "extraction_text": "Organization owners can roll out dependency review at scale by enforcing the use of the dependency review action across repositories in the organization. This involves the use of repository rulesets for which you'll set the dependency review action as a required workflow, which means that pull requests can only be merged once the workflow passes all the required checks. For more information, see [Enforcing dependency review across an organization](/en/code-security/supply-chain-security/understanding-your-software-supply-chain/enforcing-dependency-review-across-an-organization).\n"
+    }
+  ],
+  "OWASP/1.1.2": [
+    {
+      "document_id": "code-security/concepts/secret-security/about-bypass-requests-for-push-protection.md",
+      "extraction_text": "If you are a designated reviewer, you must review bypass requests and either approve or deny them based on the request details and your organization's security policies.\n"
+    }
+  ],
+  "OWASP/1.2.3": [
+    {
+      "document_id": "code-security/responsible-use/responsible-use-autofix-code-scanning.md",
+      "extraction_text": "Before merging a pull request always verify that any dependency changes are secure and maintain the intended behavior of the codebase.\n"
+    }
+  ],
+  "OWASP/3.3.1": [
+    {
+      "document_id": "packages/managing-github-packages-using-github-actions-workflows/publishing-and-installing-a-package-with-github-actions.md",
+      "extraction_text": "GitHub recommends pinning actions to a commit SHA. To get a newer version, you will need to update the SHA. You can also reference a tag or branch, but the action may change without warning.\n"
+    }
+  ],
+  "OWASP/3.3.3": [
+    {
+      "document_id": "packages/managing-github-packages-using-github-actions-workflows/publishing-and-installing-a-package-with-github-actions.md",
+      "extraction_text": "GitHub recommends pinning actions to a commit SHA. To get a newer version, you will need to update the SHA. You can also reference a tag or branch, but the action may change without warning.\n"
+    }
+  ],
+  "OWASP/4.6.1": [
+    {
+      "document_id": "actions/how-tos/write-workflows/choose-what-workflows-do/use-github-cli.md",
+      "extraction_text": "For each step that uses GitHub CLI, you must set an environment variable called `GH_TOKEN` to a token with the required scopes."
+    },
+    {
+      "document_id": "packages/managing-github-packages-using-github-actions-workflows/publishing-and-installing-a-package-with-github-actions.md",
+      "extraction_text": "If you're using a registry that supports granular permissions, and your workflow is using a personal access token to authenticate to the registry, then we highly recommend you update your workflow to use the `GITHUB_TOKEN`.\n\nFor more information about the `GITHUB_TOKEN`, see [Use GITHUB\\_TOKEN for authentication in workflows](/en/actions/security-guides/automatic-token-authentication#using-the-github_token-in-a-workflow).\n\nUsing the `GITHUB_TOKEN`, instead of a personal access token (classic) with the `repo` scope, increases the security of your repository as you don't need to use a long-lived personal access token that offers unnecessary access to the repository where your workflow is run. For more information about security best practices, see [Secure use reference](/en/actions/security-guides/security-hardening-for-github-actions#using-secrets).\n"
+    }
+  ],
+  "OWASP/4.6.2": [
+    {
+      "document_id": "actions/how-tos/write-workflows/choose-what-workflows-do/use-github-cli.md",
+      "extraction_text": "For each step that uses GitHub CLI, you must set an environment variable called `GH_TOKEN` to a token with the required scopes."
+    },
+    {
+      "document_id": "packages/managing-github-packages-using-github-actions-workflows/publishing-and-installing-a-package-with-github-actions.md",
+      "extraction_text": "For registries that support granular permissions, if your GitHub Actions workflow is using a personal access token to authenticate to a registry, we highly recommend you update your workflow to use the `GITHUB_TOKEN`. For guidance on updating your workflows that authenticate to a registry with a personal access token, see [Publishing and installing a package with GitHub Actions](/en/packages/managing-github-packages-using-github-actions-workflows/publishing-and-installing-a-package-with-github-actions#upgrading-a-workflow-that-accesses-a-registry-using-a-personal-access-token).\n"
+    },
+    {
+      "document_id": "packages/managing-github-packages-using-github-actions-workflows/publishing-and-installing-a-package-with-github-actions.md",
+      "extraction_text": "If you want your workflow to access a GitHub Packages registry that does not support granular permissions, then we recommend using the `GITHUB_TOKEN` that GitHub automatically creates for your repository when you enable GitHub Actions. You should set the permissions for this access token in the workflow file to grant read access for the `contents` scope and write access for the `packages` scope.\n"
+    },
+    {
+      "document_id": "packages/managing-github-packages-using-github-actions-workflows/publishing-and-installing-a-package-with-github-actions.md",
+      "extraction_text": "All workflows accessing registries that support granular permissions should use the `GITHUB_TOKEN` instead of a personal access token. For more information about security best practices, see [Secure use reference](/en/actions/security-guides/security-hardening-for-github-actions#using-secrets).\n"
+    },
+    {
+      "document_id": "packages/managing-github-packages-using-github-actions-workflows/publishing-and-installing-a-package-with-github-actions.md",
+      "extraction_text": "If you're using a registry that supports granular permissions, and your workflow is using a personal access token to authenticate to the registry, then we highly recommend you update your workflow to use the `GITHUB_TOKEN`.\n\nFor more information about the `GITHUB_TOKEN`, see [Use GITHUB\\_TOKEN for authentication in workflows](/en/actions/security-guides/automatic-token-authentication#using-the-github_token-in-a-workflow).\n\nUsing the `GITHUB_TOKEN`, instead of a personal access token (classic) with the `repo` scope, increases the security of your repository as you don't need to use a long-lived personal access token that offers unnecessary access to the repository where your workflow is run. For more information about security best practices, see [Secure use reference](/en/actions/security-guides/security-hardening-for-github-actions#using-secrets).\n"
+    }
+  ],
+  "OWASP/5.2.1": [
+    {
+      "document_id": "actions/how-tos/write-workflows/choose-what-workflows-do/use-github-cli.md",
+      "extraction_text": "For each step that uses GitHub CLI, you must set an environment variable called `GH_TOKEN` to a token with the required scopes."
+    },
+    {
+      "document_id": "actions/how-tos/deploy/deploy-to-third-party-platforms/sign-xcode-applications.md",
+      "extraction_text": "To use your certificate and provisioning profile on a runner, we strongly recommend that you use GitHub secrets. For more information on creating secrets and using them in a workflow, see [Using secrets in GitHub Actions](/en/actions/security-guides/using-secrets-in-github-actions).\n"
+    }
+  ],
+  "OWASP/5.3.1": [
+    {
+      "document_id": "actions/how-tos/deploy/deploy-to-third-party-platforms/sign-xcode-applications.md",
+      "extraction_text": "On self-hosted runners, the `$RUNNER_TEMP` directory is cleaned up at the end of the job execution, but the keychain and provisioning profile might still exist on the runner.\n\nIf you use self-hosted runners, you should add a final step to your workflow to help ensure that these sensitive files are deleted at the end of the job. The workflow step shown below is an example of how to do this.\n\n```yaml\n[REDACTED@3]\n```\n"
+    }
+  ],
+  "OWASP/6.1.2": [
+    {
+      "document_id": "actions/how-tos/write-workflows/choose-what-workflows-do/use-github-cli.md",
+      "extraction_text": "For each step that uses GitHub CLI, you must set an environment variable called `GH_TOKEN` to a token with the required scopes."
+    },
+    {
+      "document_id": "packages/managing-github-packages-using-github-actions-workflows/publishing-and-installing-a-package-with-github-actions.md",
+      "extraction_text": "For registries that support granular permissions, if your GitHub Actions workflow is using a personal access token to authenticate to a registry, we highly recommend you update your workflow to use the `GITHUB_TOKEN`. For guidance on updating your workflows that authenticate to a registry with a personal access token, see [Publishing and installing a package with GitHub Actions](/en/packages/managing-github-packages-using-github-actions-workflows/publishing-and-installing-a-package-with-github-actions#upgrading-a-workflow-that-accesses-a-registry-using-a-personal-access-token).\n"
+    },
+    {
+      "document_id": "packages/managing-github-packages-using-github-actions-workflows/publishing-and-installing-a-package-with-github-actions.md",
+      "extraction_text": "If you want your workflow to access a GitHub Packages registry that does not support granular permissions, then we recommend using the `GITHUB_TOKEN` that GitHub automatically creates for your repository when you enable GitHub Actions. You should set the permissions for this access token in the workflow file to grant read access for the `contents` scope and write access for the `packages` scope.\n"
+    },
+    {
+      "document_id": "packages/managing-github-packages-using-github-actions-workflows/publishing-and-installing-a-package-with-github-actions.md",
+      "extraction_text": "All workflows accessing registries that support granular permissions should use the `GITHUB_TOKEN` instead of a personal access token. For more information about security best practices, see [Secure use reference](/en/actions/security-guides/security-hardening-for-github-actions#using-secrets).\n"
+    },
+    {
+      "document_id": "packages/managing-github-packages-using-github-actions-workflows/publishing-and-installing-a-package-with-github-actions.md",
+      "extraction_text": "If you're using a registry that supports granular permissions, and your workflow is using a personal access token to authenticate to the registry, then we highly recommend you update your workflow to use the `GITHUB_TOKEN`.\n\nFor more information about the `GITHUB_TOKEN`, see [Use GITHUB\\_TOKEN for authentication in workflows](/en/actions/security-guides/automatic-token-authentication#using-the-github_token-in-a-workflow).\n\nUsing the `GITHUB_TOKEN`, instead of a personal access token (classic) with the `repo` scope, increases the security of your repository as you don't need to use a long-lived personal access token that offers unnecessary access to the repository where your workflow is run. For more information about security best practices, see [Secure use reference](/en/actions/security-guides/security-hardening-for-github-actions#using-secrets).\n"
+    }
+  ],
+  "OWASP/6.3.1": [
+    {
+      "document_id": "packages/managing-github-packages-using-github-actions-workflows/publishing-and-installing-a-package-with-github-actions.md",
+      "extraction_text": "For registries that support granular permissions, if your GitHub Actions workflow is using a personal access token to authenticate to a registry, we highly recommend you update your workflow to use the `GITHUB_TOKEN`. For guidance on updating your workflows that authenticate to a registry with a personal access token, see [Publishing and installing a package with GitHub Actions](/en/packages/managing-github-packages-using-github-actions-workflows/publishing-and-installing-a-package-with-github-actions#upgrading-a-workflow-that-accesses-a-registry-using-a-personal-access-token).\n"
+    },
+    {
+      "document_id": "packages/managing-github-packages-using-github-actions-workflows/publishing-and-installing-a-package-with-github-actions.md",
+      "extraction_text": "If you want your workflow to access a GitHub Packages registry that does not support granular permissions, then we recommend using the `GITHUB_TOKEN` that GitHub automatically creates for your repository when you enable GitHub Actions. You should set the permissions for this access token in the workflow file to grant read access for the `contents` scope and write access for the `packages` scope.\n"
+    },
+    {
+      "document_id": "packages/managing-github-packages-using-github-actions-workflows/publishing-and-installing-a-package-with-github-actions.md",
+      "extraction_text": "All workflows accessing registries that support granular permissions should use the `GITHUB_TOKEN` instead of a personal access token. For more information about security best practices, see [Secure use reference](/en/actions/security-guides/security-hardening-for-github-actions#using-secrets).\n"
+    },
+    {
+      "document_id": "packages/managing-github-packages-using-github-actions-workflows/publishing-and-installing-a-package-with-github-actions.md",
+      "extraction_text": "If you're using a registry that supports granular permissions, and your workflow is using a personal access token to authenticate to the registry, then we highly recommend you update your workflow to use the `GITHUB_TOKEN`.\n\nFor more information about the `GITHUB_TOKEN`, see [Use GITHUB\\_TOKEN for authentication in workflows](/en/actions/security-guides/automatic-token-authentication#using-the-github_token-in-a-workflow).\n\nUsing the `GITHUB_TOKEN`, instead of a personal access token (classic) with the `repo` scope, increases the security of your repository as you don't need to use a long-lived personal access token that offers unnecessary access to the repository where your workflow is run. For more information about security best practices, see [Secure use reference](/en/actions/security-guides/security-hardening-for-github-actions#using-secrets).\n"
+    }
+  ],
+  "OWASP/6.5.1": [
+    {
+      "document_id": "code-security/concepts/secret-security/about-bypass-requests-for-push-protection.md",
+      "extraction_text": "You can use GitHub Apps with fine-grained permissions to programmatically review and approve push protection bypass requests. This enables you to enforce consistent security policies, integrate with external security tools, or reduce manual review burden.\n\n> For more information about permissions, see [Organization permissions for \"Organization bypass requests for secret scanning\"](/en/enterprise-cloud@latest/rest/authentication/permissions-required-for-github-apps?apiVersion=2022-11-28#organization-permissions-for-organization-bypass-requests-for-secret-scanning).\n"
+    }
+  ],
+  "OWASP/6.5.3": [
+    {
+      "document_id": "code-security/concepts/secret-security/about-bypass-requests-for-push-protection.md",
+      "extraction_text": "You can use GitHub Apps with fine-grained permissions to programmatically review and approve push protection bypass requests. This enables you to enforce consistent security policies, integrate with external security tools, or reduce manual review burden.\n\n> For more information about permissions, see [Organization permissions for \"Organization bypass requests for secret scanning\"](/en/enterprise-cloud@latest/rest/authentication/permissions-required-for-github-apps?apiVersion=2022-11-28#organization-permissions-for-organization-bypass-requests-for-secret-scanning).\n"
+    }
+  ],
+  "OWASP/6.6.1": [
+    {
+      "document_id": "actions/how-tos/write-workflows/choose-what-workflows-do/use-github-cli.md",
+      "extraction_text": "For each step that uses GitHub CLI, you must set an environment variable called `GH_TOKEN` to a token with the required scopes."
+    },
+    {
+      "document_id": "actions/how-tos/deploy/deploy-to-third-party-platforms/sign-xcode-applications.md",
+      "extraction_text": "To use your certificate and provisioning profile on a runner, we strongly recommend that you use GitHub secrets. For more information on creating secrets and using them in a workflow, see [Using secrets in GitHub Actions](/en/actions/security-guides/using-secrets-in-github-actions).\n"
+    }
+  ],
+  "OWASP/7.1.2": [
+    {
+      "document_id": "code-security/how-tos/secure-your-supply-chain/secure-your-dependencies/configuring-dependabot-alerts.md",
+      "extraction_text": "Enable Dependabot alerts to be generated when a new vulnerable dependency is found in one of your repositories.\n"
+    },
+    {
+      "document_id": "code-security/how-tos/secure-your-supply-chain/secure-your-dependencies/configuring-dependabot-alerts.md",
+      "extraction_text": "Additionally, you can use Dependabot auto-triage rules to manage your alerts at scale, so you can auto-dismiss or snooze alerts, and specify which alerts you want Dependabot to open pull requests for. For information about the different types of auto-triage rules, and whether your repositories are eligible, see [About Dependabot auto-triage rules](/en/code-security/dependabot/dependabot-auto-triage-rules/about-dependabot-auto-triage-rules).\n"
+    }
+  ],
+  "OWASP/7.1.3": [
+    {
+      "document_id": "code-security/how-tos/secure-your-supply-chain/secure-your-dependencies/configuring-dependabot-alerts.md",
+      "extraction_text": "Additionally, you can use Dependabot auto-triage rules to manage your alerts at scale, so you can auto-dismiss or snooze alerts, and specify which alerts you want Dependabot to open pull requests for. For information about the different types of auto-triage rules, and whether your repositories are eligible, see [About Dependabot auto-triage rules](/en/code-security/dependabot/dependabot-auto-triage-rules/about-dependabot-auto-triage-rules).\n"
+    }
+  ],
+  "OWASP/7.3.1": [
+    {
+      "document_id": "code-security/how-tos/secure-at-scale/configure-organization-security/establish-complete-coverage/applying-the-github-recommended-security-configuration-in-your-organization.md",
+      "extraction_text": "The GitHub-recommended security configuration is designed to successfully reduce the security risks for low- and high-impact repositories. We recommend you apply this configuration to all the repositories in your organization."
+    },
+    {
+      "document_id": "code-security/how-tos/secure-at-scale/configure-organization-security/establish-complete-coverage/applying-the-github-recommended-security-configuration-in-your-organization.md",
+      "extraction_text": "The default security configuration for an organization is only automatically applied to new repositories created in your organization. If a repository is transferred into your organization, you will still need to apply an appropriate security configuration to the repository manually."
+    }
+  ],
+  "OWASP/8.3.1": [
+    {
+      "document_id": "code-security/concepts/secret-security/about-bypass-requests-for-push-protection.md",
+      "extraction_text": "You can use GitHub Apps with fine-grained permissions to programmatically review and approve push protection bypass requests. This enables you to enforce consistent security policies, integrate with external security tools, or reduce manual review burden.\n\n> For more information about permissions, see [Organization permissions for \"Organization bypass requests for secret scanning\"](/en/enterprise-cloud@latest/rest/authentication/permissions-required-for-github-apps?apiVersion=2022-11-28#organization-permissions-for-organization-bypass-requests-for-secret-scanning).\n"
+    }
+  ],
+  "OWASP/9.1.1": [
+    {
+      "document_id": "actions/how-tos/secure-your-work/use-artifact-attestations/use-artifact-attestations.md",
+      "extraction_text": "We recommend uploading attested assets to your organization's linked artifacts page. This page displays artifacts' build history, deployment records, and storage details. You can use this data to prioritize security alerts or quickly connect vulnerable artifacts to their owning team, source code, and build run. For more information, see [About linked artifacts](/en/code-security/concepts/supply-chain-security/linked-artifacts).\n"
+    }
+  ],
+  "OWASP/9.1.2": [
+    {
+      "document_id": "actions/how-tos/secure-your-work/use-artifact-attestations/use-artifact-attestations.md",
+      "extraction_text": "We recommend uploading attested assets to your organization's linked artifacts page. This page displays artifacts' build history, deployment records, and storage details. You can use this data to prioritize security alerts or quickly connect vulnerable artifacts to their owning team, source code, and build run. For more information, see [About linked artifacts](/en/code-security/concepts/supply-chain-security/linked-artifacts).\n"
+    }
+  ],
+  "OWASP/9.1.5": [
+    {
+      "document_id": "actions/how-tos/secure-your-work/use-artifact-attestations/use-artifact-attestations.md",
+      "extraction_text": "We recommend uploading attested assets to your organization's linked artifacts page. This page displays artifacts' build history, deployment records, and storage details. You can use this data to prioritize security alerts or quickly connect vulnerable artifacts to their owning team, source code, and build run. For more information, see [About linked artifacts](/en/code-security/concepts/supply-chain-security/linked-artifacts).\n"
+    }
+  ],
+  "OWASP/9.2.1": [
+    {
+      "document_id": "packages/managing-github-packages-using-github-actions-workflows/publishing-and-installing-a-package-with-github-actions.md",
+      "extraction_text": "GitHub recommends pinning actions to a commit SHA. To get a newer version, you will need to update the SHA. You can also reference a tag or branch, but the action may change without warning.\n"
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+SEC01, Insufficient Flow Control Mechanism
+SEC01-1,Enforce branch protection rules for all sensitive or production branches. 
+SEC01-2,Remove or restrict the use of superuser accounts in CI/CD systems. 
+SEC01-3,Prevent superuser accounts from triggering production deployments. 
+SEC01-4,Require manual approval before building or deploying to production
+SEC01-5,Disable or limit automatic merge rules that bypass review or validation. 
+SEC01-6,Ensure all build and deployment actions originate from verified CI/CD service accounts. 
+SEC01-7,Continuously monitor and detect configuration or code drift between deployed systems and CI/CD sources.
+SEC02,Inadequate Identity and Access Management
+SEC02-1,Continuously analyze all identities and the permissions they are granted and actually use. 
+SEC02-2,Remove unnecessary or unused permissions from all accounts. 
+SEC02-3,Disable or delete inactive or stale accounts. 
+SEC02-4,Centralize identity management through a trusted Identity Provider (IdP). 
+SEC02-5,Grant external collaborators the least privileges necessary and enforce automatic account expiry. 
+SEC02-6,Ensure all corporate accounts use organization-owned email domains; disallow personal emails. 
+SEC02-7,Disable self-registration for all internal systems and tools. 
+SEC02-8,Assign permissions strictly on an as-needed basis. 
+SEC02-9,Avoid granting default base permissions. 
+SEC02-10,Prohibit account sharing. 
+SEC03,Dependency Chain Abuse
+SEC03-1,Avoid fetching dependencies or artifacts from untrusted or public sources. 
+SEC03-2,"Use internal package proxies, repositories or mirrors for all dependency retrieval. "
+SEC03-3,Verify dependency integrity via checksums and digital signatures. 
+SEC03-4,Avoid using floating or “latest” version tags in dependency declarations. 
+SEC03-5,Use organizational scopes or namespaces for all internal packages. 
+SEC03-6,Enforce secure configuration for internal repositories and projects. 
+SEC03-7,Prevent disclosure of internal project or package names. 
+SEC03-8,Implement monitoring and detection for anomalous dependency activity or tampering. 
+SEC04,Poisoned Pipeline Execution (PPE)
+SEC04-1,"Execute unreviewed or untrusted code only in isolated, sandboxed environments. "
+SEC04-2,Evaluate the necessity of triggering CI/CD pipelines from external contributors. 
+SEC04-3,Require branch protection for all branches that can trigger sensitive pipelines. 
+SEC04-4,Enforce peer review for all CI/CD configuration and workflow files. 
+SEC04-5,Restrict repository permissions to only those required for pipeline operation. 
+SEC04-6,Limit CI/CD pipelines to the minimum credentials necessary for their execution. 
+SEC05, Insufficient PBAC (Pipeline-Based Access Controls)
+SEC05-1,Use shared build nodes only for workloads with the same confidentiality level.  
+SEC05-2,Limit the scope of CI/CD secrets to the minimum required for each pipeline.  
+SEC05-3,Ensure build and runner nodes are returned to a pristine state after execution.  
+SEC05-4,Run pipeline processes under dedicated OS users configured with least privilege.  
+SEC05-5,Restrict CI/CD job permissions on the controller or orchestrator node.  
+SEC05-6,Apply security patches to all build and execution nodes.  
+SEC05-7,Enforce network segmentation for CI/CD infrastructure.
+SEC05-8,Execute installation or provisioning scripts in isolated contexts without access to sensitive resources.  
+SEC06,Insufficient Credential Hygiene
+SEC06-1,Inventory and map all credentials across the engineering ecosystem. 
+SEC06-2,Restrict credential usage to defined pipeline contexts and enforce environmental conditions.
+SEC06-3,Prefer temporary or short-lived credentials over static ones. 
+SEC06-4,Continuously scan repositories for pushed or stored secrets. 
+SEC06-5,Scope secrets to the minimum functional context required for use. 
+SEC06-6,Prevent any exposure of secrets in logs. 
+SEC06-7,Clean build artifacts of used secrets. 
+SEC07,Insecure System Configuration
+SEC07-01,"Maintain a complete inventory of software components, including versions and ownership. "
+SEC07-02,Implement continuous vulnerability and patch management for all components. 
+SEC07-03,Enforce least-privilege network access and segment sensitive components. 
+SEC07-04,Periodically review and harden system and service configurations. 
+SEC07-05,Restrict permissions on pipeline execution nodes to the minimum required. 
+SEC07-06,Disable debug permissions on production systems. 
+SEC08,Ungoverned Usage of 3rd Party Services
+SEC08-1,Require formal approval before integrating third-party services. 
+SEC08-2,Grant third-party services only the permissions as-needed for their intended function. 
+SEC08-3,"Continuously monitor and review the permissions, activities and usage of integrated third-party services. "
+SEC08-4,"Maintain visibility into all active third-party integrations, including owner and purpose. "
+SEC08-5,Revoke or deprovision unused or inactive third-party services. 
+SEC08-6,Use scoped credentials and service-specific accounts for all external integrations. 
+SEC08-7,Periodically reassess third-party providers and update access accordingly. 
+SEC09,Improper Artifact Integrity Validation
+SEC09-1,Enforce code signing through verified and signed commits. 
+SEC09-2,Sign all build artifacts and verify signatures before deployment or distribution. 
+SEC09-3,Continuously detect and investigate integrity drifts between source and deployed artifacts. 
+SEC09-4,Verify the integrity and authenticity of all third-party resources consumed during build or deployment. 
+SEC09-5,Store and distribute artifacts only through trusted and attested repositories. 
+SEC10,Insufficient Logging and Visibility
+SEC10-1,Maintain an up-to-date inventory and data flow map of the CI/CD environment. 
+SEC10-2,Enable comprehensive logging for all critical components with both human-readable and programmatic access. 
+SEC10-3,Centralize and securely store all logs with strict access controls. 
+SEC10-4,Correlate logs across systems to detect anomalies or suspicious activity. 
+SEC10-5,Configure automated alerts for anomalous or malicious behavior within the CI/CD pipeline. 
+SEC10-6,Periodically review and validate logging coverage to ensure full visibility of pipeline activity. 

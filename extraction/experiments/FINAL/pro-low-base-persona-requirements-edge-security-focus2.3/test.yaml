@@ -1,0 +1,234 @@
+"code-security/reference/code-scanning/codeql/codeql-queries/swift-built-in-queries.md":
+    extractions: []
+"actions/how-tos/write-workflows/choose-what-workflows-do/use-github-cli.md":
+    extractions: []
+"code-security/reference/code-scanning/codeql/codeql-cli-manual/execute-cli-server.md":
+    extractions: []
+"code-security/responsible-use/responsible-use-autofix-code-scanning.md":
+    extractions:       
+      - extraction_class: "security_advice"
+        extraction_text: |
+          Before merging a pull request always verify that any dependency changes are secure and maintain the intended behavior of the codebase.
+        attributes:
+          type: "textual"
+      - extraction_class: "security_advice"
+        extraction_text: |
+          Developers should always look at suggestions for code changes critically. If needed, they should edit the suggested changes to ensure that the resulting code and application are correct, secure, meet performance criteria, and satisfy all other functional and non-functional requirements for the application.
+        attributes:
+          type: "textual"
+"code-security/concepts/secret-security/about-bypass-requests-for-push-protection.md":
+    extractions:
+      - extraction_class: "security_advice"
+        extraction_text: |
+          If you are a designated reviewer, you must review bypass requests and either approve or deny them based on the request details and your organization's security policies.
+        attributes:
+          type: "textual"
+      - extraction_class: "security_advice"
+        extraction_text: |
+          You can use GitHub Apps with fine-grained permissions to programmatically review and approve push protection bypass requests. This enables you to enforce consistent security policies, integrate with external security tools, or reduce manual review burden.
+
+          > For more information about permissions, see [Organization permissions for "Organization bypass requests for secret scanning"](/en/enterprise-cloud@latest/rest/authentication/permissions-required-for-github-apps?apiVersion=2022-11-28#organization-permissions-for-organization-bypass-requests-for-secret-scanning).
+        attributes:
+          type: "textual"
+"code-security/how-tos/report-and-fix-vulnerabilities/fix-reported-vulnerabilities/browsing-security-advisories-in-the-github-advisory-database.md":
+    extractions: []
+"code-security/reference/code-scanning/codeql/codeql-cli-manual/database-print-baseline.md":
+    extractions: []
+"actions/how-tos/administer/view-metrics.md":
+    extractions: []
+"code-security/concepts/code-scanning/codeql/codeql-query-suites.md":
+    extractions: []
+"code-security/how-tos/secure-your-secrets/customize-leak-detection/managing-custom-patterns.md":
+    extractions: []
+"code-security/how-tos/secure-your-supply-chain/secure-your-dependencies/configuring-dependabot-alerts.md":
+    extractions:
+      - extraction_class: "security_advice"
+        extraction_text: |
+          Enable Dependabot alerts to be generated when a new vulnerable dependency is found in one of your repositories.
+
+          When Dependabot detects vulnerable dependencies in a repository, it generates alerts. For more information, see [About Dependabot alerts](/en/code-security/dependabot/dependabot-alerts/about-dependabot-alerts).
+        attributes:
+          type: "textual"
+"actions/how-tos/secure-your-work/use-artifact-attestations/use-artifact-attestations.md":
+    extractions:
+      - extraction_class: "security_advice"
+        extraction_text: |
+          Artifact attestations enable you to increase the supply chain security of your builds by establishing where and how your software was built.
+        attributes:
+          type: "textual"
+      - extraction_class: "security_advice"
+        extraction_text: |
+          We recommend uploading attested assets to your organization's linked artifacts page. This page displays artifacts' build history, deployment records, and storage details. You can use this data to prioritize security alerts or quickly connect vulnerable artifacts to their owning team, source code, and build run. For more information, see [About linked artifacts](/en/code-security/concepts/supply-chain-security/linked-artifacts).
+        attributes:
+          type: "textual"
+"code-security/tutorials/trialing-github-advanced-security/trial-advanced-security.md":
+    extractions: []
+"code-security/how-tos/secure-your-supply-chain/manage-your-dependency-security/configuring-access-to-private-registries-for-dependabot.md":
+    extractions:
+      - extraction_class: "security_advice"
+        extraction_text: |
+          Dependabot can use OpenID Connect (OIDC) to authenticate with private registries, eliminating the need to store long-lived credentials as repository secrets.
+
+          With OIDC-based authentication, Dependabot update jobs can dynamically obtain short-lived credentials from your cloud identity provider, just like GitHub Actions workflows using OIDC federation.
+        attributes:
+          type: "textual"
+"code-security/tutorials/trialing-github-advanced-security/planning-a-trial-of-ghas.md":
+    extractions: []
+"actions/concepts/workflows-and-actions/workflows.md":
+    extractions: []
+"code-security/how-tos/report-and-fix-vulnerabilities/fix-reported-vulnerabilities/publishing-a-repository-security-advisory.md":
+    extractions:
+      - extraction_class: "security_advice"
+        extraction_text: |
+          When you publish a security advisory, you notify your community about the security vulnerability that the security advisory addresses. Publishing a security advisory makes it easier for your community to update package dependencies and research the impact of the security vulnerability.
+        attributes:
+          type: "textual"
+      - extraction_class: "security_advice"
+        extraction_text: |
+          > \[!WARNING]
+          > Whenever possible, you should always add a fix version to a security advisory prior to publishing the advisory. If you don't, the advisory will be published without a fixed version, and Dependabot will alert your users about the issue, without offering any safe version to update to.
+        attributes:
+          type: "textual"
+"actions/how-tos/deploy/deploy-to-third-party-platforms/sign-xcode-applications.md":
+    extractions:
+      - extraction_class: "security_advice"
+        extraction_text: |
+          To use your certificate and provisioning profile on a runner, we strongly recommend that you use GitHub secrets. For more information on creating secrets and using them in a workflow, see [Using secrets in GitHub Actions](/en/actions/security-guides/using-secrets-in-github-actions).
+        attributes:
+          type: "textual"
+      - extraction_class: "security_advice"
+        extraction_text: |
+          On self-hosted runners, the `$RUNNER_TEMP` directory is cleaned up at the end of the job execution, but the keychain and provisioning profile might still exist on the runner.
+
+          If you use self-hosted runners, you should add a final step to your workflow to help ensure that these sensitive files are deleted at the end of the job.
+        attributes:
+          type: "textual"
+"code-security/reference/code-scanning/codeql/codeql-cli-manual/execute-upgrades.md":
+    extractions: []
+"code-security/how-tos/secure-your-secrets/manage-bypass-requests/enabling-delegated-bypass-for-push-protection.md":
+    extractions: []
+"packages/managing-github-packages-using-github-actions-workflows/publishing-and-installing-a-package-with-github-actions.md":
+    extractions:
+      - extraction_class: "security_advice"
+        extraction_text: |
+          For registries that support granular permissions, if your GitHub Actions workflow is using a personal access token to authenticate to a registry, we highly recommend you update your workflow to use the `GITHUB_TOKEN`. For guidance on updating your workflows that authenticate to a registry with a personal access token, see [Publishing and installing a package with GitHub Actions](/en/packages/managing-github-packages-using-github-actions-workflows/publishing-and-installing-a-package-with-github-actions#upgrading-a-workflow-that-accesses-a-registry-using-a-personal-access-token).
+        attributes:
+          type: "textual"
+      - extraction_class: "security_advice"
+        extraction_text: |
+          If you want your workflow to access a GitHub Packages registry that does not support granular permissions, then we recommend using the `GITHUB_TOKEN` that GitHub automatically creates for your repository when you enable GitHub Actions. You should set the permissions for this access token in the workflow file to grant read access for the `contents` scope and write access for the `packages` scope. For forks, the `GITHUB_TOKEN` is granted read access for the parent repository. For more information, see [Use GITHUB\\\_TOKEN for authentication in workflows](/en/actions/security-guides/automatic-token-authentication).
+        attributes:
+          type: "textual"
+      - extraction_class: "security_advice"
+        extraction_text: |
+          All workflows accessing registries that support granular permissions should use the `GITHUB_TOKEN` instead of a personal access token. For more information about security best practices, see [Secure use reference](/en/actions/security-guides/security-hardening-for-github-actions#using-secrets).
+        attributes:
+          type: "textual"
+      # - extraction_class: "security_advice"
+      #   extraction_text: |
+      #     > \[!NOTE]
+      #     >
+      #     > * This workflow uses actions that are not certified by GitHub. They are provided by a third-party and are governed by separate terms of service, privacy policy, and support documentation.
+      #   attributes:
+      #     type: "alert"
+      - extraction_class: "security_advice"
+        extraction_text: |
+          > * GitHub recommends pinning actions to a commit SHA. To get a newer version, you will need to update the SHA. You can also reference a tag or branch, but the action may change without warning.
+        attributes:
+          type: "alert"
+      - extraction_class: "security_advice"
+        extraction_text: |
+          GitHub Packages supports the `GITHUB_TOKEN` for easy and secure authentication in your workflows. If you're using a registry that supports granular permissions, and your workflow is using a personal access token to authenticate to the registry, then we highly recommend you update your workflow to use the `GITHUB_TOKEN`.
+
+          For more information about the `GITHUB_TOKEN`, see [Use GITHUB\\\_TOKEN for authentication in workflows](/en/actions/security-guides/automatic-token-authentication#using-the-github_token-in-a-workflow).
+
+          Using the `GITHUB_TOKEN`, instead of a personal access token (classic) with the `repo` scope, increases the security of your repository as you don't need to use a long-lived personal access token that offers unnecessary access to the repository where your workflow is run. For more information about security best practices, see [Secure use reference](/en/actions/security-guides/security-hardening-for-github-actions#using-secrets).
+        attributes:
+          type: "textual"
+"code-security/how-tos/secure-at-scale/configure-organization-security/establish-complete-coverage/applying-the-github-recommended-security-configuration-in-your-organization.md":
+    extractions:
+      - extraction_class: "security_advice"
+        extraction_text: |
+          The GitHub-recommended security configuration is designed to successfully reduce the security risks for low- and high-impact repositories. We recommend you apply this configuration to all the repositories in your organization.
+        attributes:
+          type: "textual"
+      - extraction_class: "security_advice"
+        extraction_text: |
+          > \[!NOTE]
+          > The default security configuration for an organization is only automatically applied to new repositories created in your organization. If a repository is transferred into your organization, you will still need to apply an appropriate security configuration to the repository manually.
+        attributes:
+          type: "textual"
+"code-security/how-tos/view-and-interpret-data/viewing-code-scanning-logs.md":
+    extractions: []
+"code-security/concepts/secret-security/about-delegated-bypass-for-push-protection.md":
+    extractions: []
+"actions/how-tos/manage-runners/self-hosted-runners/remove-runners.md":
+    extractions: []
+"code-security/how-tos/secure-your-secrets/customize-leak-detection/enabling-extended-metadata-checks-for-your-repository.md":
+    extractions: 
+      - extraction_class: "security_advice"
+        extraction_text: |
+          Extended metadata checks, often referred to as analyzers in other tools, are a secret scanning feature that you can enable for supported tokens.
+
+          When you enable extended metadata checks for tokens, secret scanning provides you with additional information about detected secrets, such as ownership and contact details. This information helps you:
+
+          * **Gain deeper insight into detected secrets**: Know who owns a secret.
+          * **Improve incident response**: Quickly identify responsible teams or individuals when a secret is leaked.
+          * **Enhance compliance**: Ensure secrets align with your organization’s governance and security policies.
+
+          This information appears on GitHub, in the page for the related secret scanning alert, helping you prioritize and remediate exposures more efficiently.
+        attributes:
+          type: "textual"
+"actions/tutorials/migrate-to-github-actions/manual-migrations/migrate-from-travis-ci.md":
+    extractions: []
+"code-security/how-tos/manage-security-alerts/remediate-alerts-at-scale/creating-managing-security-campaigns.md":
+    extractions: []
+"actions/concepts/workflows-and-actions/concurrency.md":
+    extractions: []
+"actions/tutorials/manage-your-work/schedule-issue-creation.md":
+    extractions: []
+"code-security/how-tos/secure-your-secrets/work-with-leak-prevention/working-with-push-protection-in-the-github-ui.md":
+    extractions: []
+"code-security/reference/supply-chain-security/dependabot-errors.md":
+    extractions:
+      - extraction_class: "security_advice"
+        extraction_text: |
+          When an ecosystem has a deep and complex dependency graph, for example, npm and RubyGems, it is often impossible to upgrade a single dependency without upgrading the whole ecosystem.
+
+          The best way to avoid this problem is to stay up to date with the most recently released versions, for example, by enabling version updates. This increases the likelihood that a vulnerability in one dependency can be resolved by a simple upgrade that doesn't break the dependency graph.
+        attributes:
+          type: "textual"   
+"code-security/tutorials/customize-code-scanning/creating-and-working-with-codeql-packs.md":
+    extractions: []
+"code-security/tutorials/fix-reported-vulnerabilities/write-security-advisories.md":
+    extractions:
+      - extraction_class: "security_advice"
+        extraction_text: |
+          > \[!NOTE]
+          > If you are a security researcher, you should directly contact maintainers to ask them to create security advisories or issue CVEs on your behalf in repositories that you don't administer. However, if private vulnerability reporting is enabled for the repository, you can *privately* report a vulnerability yourself. For more information, see [Privately reporting a security vulnerability](/en/code-security/security-advisories/guidance-on-reporting-and-writing-information-about-vulnerabilities/privately-reporting-a-security-vulnerability).          
+        attributes:
+          type: "alert"
+"code-security/concepts/code-scanning/codeql/query-reference-files.md":
+    extractions: []
+"code-security/how-tos/scan-code-for-vulnerabilities/scan-from-vs-code/using-the-codeql-model-editor.md":
+    extractions: []
+"code-security/concepts/vulnerability-reporting-and-management/about-repository-security-advisories.md":
+    extractions: []
+"code-security/tutorials/adopting-github-advanced-security-at-scale/phase-4-create-internal-documentation.md":
+    extractions: 
+      - extraction_class: "security_advice"
+        extraction_text: |
+          Before enabling GitHub Advanced Security, you should create internal documentation that defines processes for teams to follow. Everyone needs to know what to do when they receive a security alert, even if the process simply asks the team to apply their best judgment.
+        attributes:
+          type: "textual"
+      - extraction_class: "security_advice"
+        extraction_text: |
+          You should ensure developers are empowered to maintain the security of their repository and that the security team are authorized to verify both what developers are doing and that it's in the best interest of security.
+        attributes:
+          type: "textual"
+"code-security/how-tos/secure-your-supply-chain/manage-your-dependency-security/configuring-the-dependency-review-action.md":
+    extractions: []
+"code-security/how-tos/report-and-fix-vulnerabilities/configure-vulnerability-reporting/adding-a-security-policy-to-your-repository.md":
+    extractions: []
+"actions/how-tos/create-and-publish-actions/publish-in-github-marketplace.md":
+    extractions: []

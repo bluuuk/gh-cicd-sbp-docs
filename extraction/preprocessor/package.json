@@ -1,0 +1,20 @@
+{
+  "name": "preprocess",
+  "module": "index.ts",
+  "type": "module",
+  "private": true,
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "remark": "^15.0.1",
+    "remark-gfm": "^4.0.1",
+    "remark-parse": "^11.0.0",
+    "strip-markdown": "^6.0.0",
+    "unified": "^11.0.5",
+    "unist-util-visit": "^5.1.0"
+  }
+}

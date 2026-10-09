@@ -1,0 +1,118 @@
+_id,github_actionable,owasp_actionable,category_key,overlap_bucket
+OWASP/1.1.1,True,True,1,OWASP actionable and GitHub actionable
+OWASP/1.1.2,True,False,1,Not OWASP actionable and GitHub actionable
+OWASP/1.1.3,False,False,1,Not OWASP actionable and not GitHub actionable
+OWASP/1.2.1,True,False,1,Not OWASP actionable and GitHub actionable
+OWASP/1.2.2,False,True,1,OWASP actionable and not GitHub actionable
+OWASP/1.2.3,False,True,1,OWASP actionable and not GitHub actionable
+OWASP/1.3.1,True,True,1,OWASP actionable and GitHub actionable
+OWASP/1.4.1,False,False,1,Not OWASP actionable and not GitHub actionable
+OWASP/1.4.2,False,False,1,Not OWASP actionable and not GitHub actionable
+OWASP/1.5.1,False,False,1,Not OWASP actionable and not GitHub actionable
+OWASP/1.5.2,False,False,1,Not OWASP actionable and not GitHub actionable
+OWASP/10.1.1,False,False,10,Not OWASP actionable and not GitHub actionable
+OWASP/10.2.1,True,True,10,OWASP actionable and GitHub actionable
+OWASP/10.2.2,False,False,10,Not OWASP actionable and not GitHub actionable
+OWASP/10.2.3,True,False,10,Not OWASP actionable and GitHub actionable
+OWASP/10.3.1,True,True,10,OWASP actionable and GitHub actionable
+OWASP/10.4.1,True,True,10,OWASP actionable and GitHub actionable
+OWASP/2.1.1,True,False,2,Not OWASP actionable and GitHub actionable
+OWASP/2.1.2,False,True,2,OWASP actionable and not GitHub actionable
+OWASP/2.2.1,False,True,2,OWASP actionable and not GitHub actionable
+OWASP/2.3.1,False,True,2,OWASP actionable and not GitHub actionable
+OWASP/2.4.1,True,True,2,OWASP actionable and GitHub actionable
+OWASP/2.4.2,False,True,2,OWASP actionable and not GitHub actionable
+OWASP/2.4.3,True,False,2,Not OWASP actionable and GitHub actionable
+OWASP/2.5.1,False,False,2,Not OWASP actionable and not GitHub actionable
+OWASP/2.5.2,False,False,2,Not OWASP actionable and not GitHub actionable
+OWASP/2.5.3,False,True,2,OWASP actionable and not GitHub actionable
+OWASP/2.5.4,False,True,2,OWASP actionable and not GitHub actionable
+OWASP/2.6.1,True,False,2,Not OWASP actionable and GitHub actionable
+OWASP/2.6.2,False,False,2,Not OWASP actionable and not GitHub actionable
+OWASP/2.7.1,False,True,2,OWASP actionable and not GitHub actionable
+OWASP/2.7.2,False,False,2,Not OWASP actionable and not GitHub actionable
+OWASP/2.8.1,False,False,2,Not OWASP actionable and not GitHub actionable
+OWASP/2.9.1,True,True,2,OWASP actionable and GitHub actionable
+OWASP/2.9.2,True,True,2,OWASP actionable and GitHub actionable
+OWASP/2.9.3,True,True,2,OWASP actionable and GitHub actionable
+OWASP/3.1.1,False,True,3,OWASP actionable and not GitHub actionable
+OWASP/3.1.2,False,True,3,OWASP actionable and not GitHub actionable
+OWASP/3.1.3,False,True,3,OWASP actionable and not GitHub actionable
+OWASP/3.1.4,True,True,3,OWASP actionable and GitHub actionable
+OWASP/3.1.5,True,False,3,Not OWASP actionable and GitHub actionable
+OWASP/3.2.1,True,False,3,Not OWASP actionable and GitHub actionable
+OWASP/3.2.2,True,True,3,OWASP actionable and GitHub actionable
+OWASP/3.3.1,True,True,3,OWASP actionable and GitHub actionable
+OWASP/3.3.2,True,True,3,OWASP actionable and GitHub actionable
+OWASP/3.3.3,True,True,3,OWASP actionable and GitHub actionable
+OWASP/3.4.1,False,False,3,Not OWASP actionable and not GitHub actionable
+OWASP/3.4.2,False,False,3,Not OWASP actionable and not GitHub actionable
+OWASP/3.4.3,False,True,3,OWASP actionable and not GitHub actionable
+OWASP/3.5.1,False,True,3,OWASP actionable and not GitHub actionable
+OWASP/3.6.1,False,True,3,OWASP actionable and not GitHub actionable
+OWASP/3.7.1,False,False,3,Not OWASP actionable and not GitHub actionable
+OWASP/3.8.1,True,False,3,Not OWASP actionable and GitHub actionable
+OWASP/3.8.2,False,False,3,Not OWASP actionable and not GitHub actionable
+OWASP/4.1.1,True,True,4,OWASP actionable and GitHub actionable
+OWASP/4.2.1,True,False,4,Not OWASP actionable and GitHub actionable
+OWASP/4.2.2,True,False,4,Not OWASP actionable and GitHub actionable
+OWASP/4.2.3,False,True,4,OWASP actionable and not GitHub actionable
+OWASP/4.3.1,False,True,4,OWASP actionable and not GitHub actionable
+OWASP/4.4.1,True,True,4,OWASP actionable and GitHub actionable
+OWASP/4.4.2,False,True,4,OWASP actionable and not GitHub actionable
+OWASP/4.4.3,False,True,4,OWASP actionable and not GitHub actionable
+OWASP/4.5.1,False,True,4,OWASP actionable and not GitHub actionable
+OWASP/4.6.1,True,False,4,Not OWASP actionable and GitHub actionable
+OWASP/4.6.2,True,False,4,Not OWASP actionable and GitHub actionable
+OWASP/5.1.1,True,True,5,OWASP actionable and GitHub actionable
+OWASP/5.1.2,True,False,5,Not OWASP actionable and GitHub actionable
+OWASP/5.2.1,True,False,5,Not OWASP actionable and GitHub actionable
+OWASP/5.3.1,True,True,5,OWASP actionable and GitHub actionable
+OWASP/5.4.1,False,False,5,Not OWASP actionable and not GitHub actionable
+OWASP/5.5.1,True,False,5,Not OWASP actionable and GitHub actionable
+OWASP/5.5.2,True,True,5,OWASP actionable and GitHub actionable
+OWASP/5.6.1,True,False,5,Not OWASP actionable and GitHub actionable
+OWASP/5.7.1,True,True,5,OWASP actionable and GitHub actionable
+OWASP/5.7.2,False,False,5,Not OWASP actionable and not GitHub actionable
+OWASP/5.8.1,False,False,5,Not OWASP actionable and not GitHub actionable
+OWASP/6.1.1,True,False,6,Not OWASP actionable and GitHub actionable
+OWASP/6.1.2,True,False,6,Not OWASP actionable and GitHub actionable
+OWASP/6.2.1,True,True,6,OWASP actionable and GitHub actionable
+OWASP/6.3.1,True,True,6,OWASP actionable and GitHub actionable
+OWASP/6.3.2,True,False,6,Not OWASP actionable and GitHub actionable
+OWASP/6.3.3,True,False,6,Not OWASP actionable and GitHub actionable
+OWASP/6.4.1,True,True,6,OWASP actionable and GitHub actionable
+OWASP/6.5.1,True,True,6,OWASP actionable and GitHub actionable
+OWASP/6.5.2,True,True,6,OWASP actionable and GitHub actionable
+OWASP/6.5.3,True,True,6,OWASP actionable and GitHub actionable
+OWASP/6.5.4,True,True,6,OWASP actionable and GitHub actionable
+OWASP/6.6.1,True,False,6,Not OWASP actionable and GitHub actionable
+OWASP/6.7.1,True,True,6,OWASP actionable and GitHub actionable
+OWASP/6.7.2,True,False,6,Not OWASP actionable and GitHub actionable
+OWASP/6.8.1,True,False,6,Not OWASP actionable and GitHub actionable
+OWASP/7.1.1,True,True,7,OWASP actionable and GitHub actionable
+OWASP/7.1.2,True,True,7,OWASP actionable and GitHub actionable
+OWASP/7.1.3,True,True,7,OWASP actionable and GitHub actionable
+OWASP/7.1.4,True,True,7,OWASP actionable and GitHub actionable
+OWASP/7.1.5,True,False,7,Not OWASP actionable and GitHub actionable
+OWASP/7.1.6,True,True,7,OWASP actionable and GitHub actionable
+OWASP/7.2.1,True,False,7,Not OWASP actionable and GitHub actionable
+OWASP/7.3.1,True,False,7,Not OWASP actionable and GitHub actionable
+OWASP/7.4.1,True,False,7,Not OWASP actionable and GitHub actionable
+OWASP/7.4.2,False,True,7,OWASP actionable and not GitHub actionable
+OWASP/8.1.1,True,False,8,Not OWASP actionable and GitHub actionable
+OWASP/8.1.2,False,False,8,Not OWASP actionable and not GitHub actionable
+OWASP/8.2.1,True,True,8,OWASP actionable and GitHub actionable
+OWASP/8.2.2,False,False,8,Not OWASP actionable and not GitHub actionable
+OWASP/8.2.3,False,False,8,Not OWASP actionable and not GitHub actionable
+OWASP/8.3.1,False,False,8,Not OWASP actionable and not GitHub actionable
+OWASP/8.3.2,False,False,8,Not OWASP actionable and not GitHub actionable
+OWASP/8.3.3,False,True,8,OWASP actionable and not GitHub actionable
+OWASP/8.4.1,False,False,8,Not OWASP actionable and not GitHub actionable
+OWASP/9.1.1,True,False,9,Not OWASP actionable and GitHub actionable
+OWASP/9.1.2,True,True,9,OWASP actionable and GitHub actionable
+OWASP/9.1.3,True,True,9,OWASP actionable and GitHub actionable
+OWASP/9.1.4,False,True,9,OWASP actionable and not GitHub actionable
+OWASP/9.1.5,True,True,9,OWASP actionable and GitHub actionable
+OWASP/9.1.6,False,False,9,Not OWASP actionable and not GitHub actionable
+OWASP/9.2.1,True,True,9,OWASP actionable and GitHub actionable

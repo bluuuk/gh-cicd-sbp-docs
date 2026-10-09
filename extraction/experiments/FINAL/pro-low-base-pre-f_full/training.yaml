@@ -1,0 +1,38 @@
+"actions/concepts/security/script-injections.md":
+  extractions:
+  - extraction_class: "security_advice"
+    extraction_text: |
+      When creating workflows, [custom actions](/en/actions/creating-actions/about-custom-actions), and [composite actions](/en/actions/creating-actions/creating-a-composite-action), you should always consider whether your code might execute untrusted input from attackers. This can occur when an attacker adds malicious commands and scripts to a context. When your workflow runs, those strings might be interpreted as code which is then executed on the runner.
+
+      Attackers can add their own malicious content to the [`github` context](/en/actions/learn-github-actions/contexts#github-context), which should be treated as potentially untrusted input. These contexts typically end with `body`, `default_branch`, `email`, `head_ref`, `label`, `message`, `name`, `page_name`,`ref`, and `title`. For example: `github.event.issue.title`, or `github.event.pull_request.body`.
+
+      You should ensure that these values do not flow directly into workflows, actions, API calls, or anywhere else where they could be interpreted as executable code.
+    attributes:
+      type: "textual"
+  - extraction_class: "security_advice"
+    extraction_text: |
+      By adopting the same defensive programming posture you would use for any other privileged application code, you can help security harden your use of GitHub Actions. For information on some of the steps an attacker could take, see [Secure use reference](/en/actions/security-guides/security-hardening-for-github-actions#potential-impact-of-a-compromised-runner).
+    attributes:
+      type: "textual"
+  - extraction_class: "security_advice"
+    extraction_text: |
+      In addition, there are other less obvious sources of potentially untrusted input, such as branch names and email addresses, which can be quite flexible in terms of their permitted content. For example, `zzz";echo${IFS}"hello";#` would be a valid branch name and would be a possible attack vector for a target repository.
+    attributes:
+      type: "textual"
+"code-security/concepts/supply-chain-security/about-dependency-review.md":
+  extractions:
+    - extraction_class: "security_advice"
+      extraction_text: |
+        By checking the dependency reviews in a pull request, and changing any dependencies that are flagged as vulnerable, you can avoid vulnerabilities being added to your project. For more information about how dependency review works, see [Reviewing dependency changes in a pull request](/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/reviewing-dependency-changes-in-a-pull-request).
+      attributes:
+        type: "textual"
+    - extraction_class: "security_advice"
+      extraction_text: |
+        Dependabot alerts will find vulnerabilities that are already in your dependencies, but it's much better to avoid introducing potential problems than to fix problems at a later date. For more information about Dependabot alerts, see [About Dependabot alerts](/en/code-security/dependabot/dependabot-alerts/about-dependabot-alerts#dependabot-alerts-for-vulnerable-dependencies).
+      attributes:
+        type: "textual"
+    - extraction_class: "security_advice"
+      extraction_text: |
+        The "dependency review action" refers to the specific action that can report on differences in a pull request within the GitHub Actions context. See [`dependency-review-action`](https://github.com/actions/dependency-review-action). You can use the dependency review action in your repository to enforce dependency reviews on your pull requests. The action scans for vulnerable versions of dependencies introduced by package version changes in pull requests, and warns you about the associated security vulnerabilities. This gives you better visibility of what's changing in a pull request, and helps prevent vulnerabilities being added to your repository.
+      attributes:
+        type: "textual"

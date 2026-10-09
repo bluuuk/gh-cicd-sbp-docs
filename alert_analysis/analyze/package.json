@@ -1,0 +1,25 @@
+{
+  "name": "analysis",
+  "module": "index.ts",
+  "type": "module",
+  "private": true,
+  "scripts": {},
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "commonmark": "^0.31.2",
+    "markdown-it": "^14.1.0",
+    "marked": "^17.0.1",
+    "mdast-util-to-markdown": "^2.1.2",
+    "remark": "^15.0.1",
+    "remark-frontmatter": "^5.0.0",
+    "remark-gfm": "^4.0.1",
+    "remark-parse": "^11.0.0",
+    "unified": "^11.0.5",
+    "unist-util-visit": "^5.1.0"
+  }
+}

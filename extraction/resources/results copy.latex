@@ -1,0 +1,59 @@
+\begin{table}
+\caption{empty}
+\begin{tabular}{lrrrrrrrr}
+\toprule
+Experiment & fp & precision & fn & recall & f1 & fuzzy_rate & token_p & token_r \\
+\midrule
+% Model and Thinking
+    pro-low-base & 29 & 39.6 & 1 & 95.0 & 55.9 & 4.2 & 86.3 & 95.0 \\
+    flash-light-min-base & 73 & 18.9 & 3 & 85.0 & 30.9 & 12.2 & 87.0 & 82.2 \\
+    flash-min-base & 86 & 17.3 & 2 & 90.0 & 29.0 & 9.6 & 79.0 & 88.5 \\
+    pro-high-base & 38 & 33.3 & 1 & 95.0 & 49.4 & 8.8 & 81.8 & 92.0 \\
+
+% Add persona
+    pro-low-base-persona & 25 & 43.2 & 1 & 95.0 & 59.4 & 2.3 & 87.8 & 85.5 \\
+
+% Requirements vs Prescriptive
+    % Given requirements 
+    pro-low-base-persona-requirements & 22 & 46.3 & 1 & 95.0 & 62.3 & 4.9 & 88.8 & 83.3 \\
+    % Add inclusion/exclusion edge cases
+    pro-low-base-persona-requirements-edge & 13 & 56.7 & 3 & 85.0 & 68.0 & 6.7 & 91.3 & 84.6 \\
+    % Just say "A Security advice items is to be prescriptive and not descriptive."
+    pro-low-base-persona-prescriptive & 23 & 43.9 & 2 & 90.0 & 59.0 & 2.4 & 87.5 & 89.6 \\
+    % Add inclusion/exclusion edge cases
+    pro-low-base-persona-prescriptive-edge & 12 & 60.0 & 2 & 90.0 & 72.0 & 6.7 & 87.1 & 79.6 \\
+
+% Path: Different few shot examples -> Already have persona + requirements + constraints
+    % Unrelated example -> AI, Script(3 extractions)
+    pro-low-base-pre-f_other & 33 & 35.3 & 2 & 90.0 & 50.7 & 7.8 & 86.4 & 87.8 \\
+    % Unrelated example -> Script, AI(1 extraction)
+    pro-low-base-pre-f_med & 16 & 51.5 & 3 & 85.0 & 64.2 & 12.1 & 86.2 & 86.8 \\
+    % Related example -> Script, about-dependency-review(3 extractions)
+    pro-low-base-pre-f_full & 28 & 39.1 & 2 & 90.0 & 54.5 & 4.3 & 83.3 & 86.8 \\
+    % Additional file that contaings nothing 
+    pro-low-base-pre-f_empty & 9 & 64.0 & 4 & 80.0 & 71.1 & 12.0 & 90.1 & 89.2 \\
+
+% Explicit vs implicit definition
+    % - **Security Relevance**: The advice is explicitly tied to preventing, mitigating, or identifying a security vulnerability, threat, or breach or to security benefits or imporvements. General software quality assurance (QA) or bug-fixing advice does not qualify unless it specifically targets a security outcome. 
+    pro-low-base-persona-requirements-edge-security-focus & 22 & 45.0 & 2 & 90.0 & 60.0 & 2.5 & 87.8 & 78.2 \\
+    % **Security Relevance**: The primary association association for the average developer is security if there are multiple interpretations.
+    pro-low-base-persona-requirements-edge-security-focus2 & 8 & 69.2 & 2 & 90.0 & 78.3 & 7.7 & 93.1 & 89.9 \\
+
+% change constraints to try to influence matching score
+    pro-low-base-persona-requirements-edge-security-focus2-constraints1 & 14 & 53.3 & 4 & 80.0 & 64.0 & 10.0 & 87.0 & 89.5 \\
+    pro-low-base-persona-requirements-edge-security-focus2-constraints2 & 17 & 48.5 & 4 & 80.0 & 60.4 & 6.1 & 91.1 & 88.8 \\
+    pro-low-base-persona-requirements-edge-security-focus2-constraints3 & 18 & 50.0 & 2 & 90.0 & 64.3 & 11.1 & 87.4 & 84.8 \\
+
+% Repititions
+    pro-low-base-persona-requirements-edge-security-focus2.1 & 15 & 54.5 & 2 & 90.0 & 67.9 & 6.1 & 90.3 & 87.5 \\
+    pro-low-base-persona-requirements-edge-security-focus2.2 & 17 & 50.0 & 3 & 85.0 & 63.0 & 5.9 & 96.0 & 84.7 \\
+    pro-low-base-persona-requirements-edge-security-focus2.3 & 17 & 52.8 & 1 & 95.0 & 67.9 & 2.8 & 89.1 & 83.1 \\
+
+% Chunking and multiple extraction passes make results worse
+    pro-low-base-persona-requirements-edge-security-focus2.reps & 15 & 54.5 & 2 & 90.0 & 67.9 & 6.1 & 92.8 & 87.5 \\
+    pro-low-base-persona-requirements-edge-security-focus2chunk & 33 & 34.0 & 3 & 85.0 & 48.6 & 4.0 & 96.0 & 88.1 \\
+
+\bottomrule
+\end{tabular}
+\end{table}
+
